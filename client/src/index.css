@@ -1,0 +1,135 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 252 59% 48%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 142 71% 45%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 349 89% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 252 59% 48%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 252 59% 98%;
+    --sidebar-foreground: 252 59% 26.1%;
+    --sidebar-primary: 252 59% 48%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 252 59% 95.9%;
+    --sidebar-accent-foreground: 252 59% 30%;
+    --sidebar-border: 252 13% 91%;
+    --sidebar-ring: 252 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 252 59% 54%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 142 71% 45%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 349 89% 60%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 252 59% 54%;
+    
+    --sidebar-background: 252 59% 15%;
+    --sidebar-foreground: 252 59% 95.9%;
+    --sidebar-primary: 252 59% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 252 59% 25%;
+    --sidebar-accent-foreground: 252 59% 95.9%;
+    --sidebar-border: 252 59% 25%;
+    --sidebar-ring: 252 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Thêm hiệu ứng gradient cho các card */
+.gradient-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  transition: transform 0.3s ease;
+}
+
+.gradient-card:hover {
+  transform: translateY(-5px);
+}
+
+.author-card {
+  background: linear-gradient(90deg, hsla(277, 75%, 94%, 1) 0%, hsla(277, 50%, 90%, 1) 100%);
+}
+
+.book-card {
+  background: linear-gradient(90deg, hsla(46, 73%, 95%, 1) 0%, hsla(176, 73%, 94%, 1) 100%);
+}
+
+/* Hiệu ứng nút */
+.btn-primary-effect {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(102, 51, 204, 0.1);
+}
+
+.btn-primary-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(102, 51, 204, 0.2);
+}
+
+.btn-secondary-effect {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(22, 163, 74, 0.1);
+}
+
+.btn-secondary-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(22, 163, 74, 0.2);
+}
